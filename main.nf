@@ -1,6 +1,8 @@
 
 def paramsWithUsage = readParamsFromJsonSettings()
 
+// mshulew version
+
 // Constants
 acceptableGenomes = ["rnor6", "hg38", "mm10"]
 allowedSpikes     = ["ercc", "miltenyi"]
