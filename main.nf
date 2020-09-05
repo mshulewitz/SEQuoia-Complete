@@ -206,10 +206,9 @@ process starAlign {
         --outFilterMatchNminOverLread 0 \
         --outReadsUnmapped Fastx \
         --outSAMtype BAM SortedByCoordinate \
-        # --outSAMmultNmax 1 \
-        # ^ do not print mms, just report in NH tag
-        # --outMultimapperOrder Random \
-        # --runRNGseed 1234 \
+        --outSAMmultNmax 1 \
+        --outMultimapperOrder Random \
+        --runRNGseed 1234 \
         --outFileNamePrefix ./ > star_log.txt 2>&1
     rm -rf _STARgenome
     sambamba index -t $task.cpus Aligned.sortedByCoord.out.bam
